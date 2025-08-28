@@ -1,4 +1,4 @@
-name: Build ProjectNERV
+name: Build ProjectNERV-a52sxq
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [a51, a52sxq, a71, a73xq, a53x, m52xq, r9q, r9q2]
+        target: [a52sxq]
 
     steps:
       - name: Checkout repo
