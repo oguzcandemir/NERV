@@ -99,3 +99,8 @@ jobs:
           RESPONSE=$(curl -s -F "file=@$ZIP_FILE" -F "token=${{ secrets.GOFILE_TOKEN }}" -F "folderId=${{ secrets.GOFILE_FOLDER_ID }}" "https://upload-eu-par.gofile.io/uploadFile")
           echo "Download link:"
           echo "$RESPONSE" | jq -r '.data.downloadPage'
+
+          RESPONSE_PUBLIC=$(curl -s -F "file=@$ZIP_FILE" -F "token=${{ secrets.GOFILE_PUBLIC_TOKEN }}" -F "folderId=${{ secrets.GOFILE_PUBLIC_FOLDER_ID }}" "https://upload-eu-par.gofile.io/uploadFile")
+          echo "Download link:"
+          echo "$RESPONSE_PUBLIC" | jq -r '.data.downloadPage'
+          
